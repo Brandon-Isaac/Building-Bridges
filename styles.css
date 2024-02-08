@@ -1,45 +1,125 @@
-/* General Styles */
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
   }
   
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
   header {
+    position: fixed; /* Set the position to fixed */
+    top: 0; /* Position it at the top of the viewport */
+    width: 100%; /* Make it take up the full width */
     background-color: #333;
+    padding: 15px 0;
+    z-index: 999; /* Ensure it appears above other content */
     color: #fff;
-    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 10px 4px rgba(0, 0, 0, 0.2);
+    width: 205vh;
+    border-radius:0 0 40px 0;
+    height: auto;
   }
   
-  header h1 {
-    margin: 0;
-    padding: 0;
-    font-size: 24px;
+  .logo {
+    max-width: 100px;
+    margin-left: 30px;
+  }
+  .logo img{
+    width: 100%;
+    transition: 0.5s ease;
+  }
+  .logo img:hover{
+    cursor: pointer;
+    filter: brightness(1.5);
+    width:120%;
   }
   
   nav ul {
     list-style-type: none;
-    padding: 0;
-    margin: 0;
+    display: flex;
+    justify-content: baseline;
   }
   
   nav ul li {
-    display: inline;
     margin-right: 20px;
   }
   
   nav ul li a {
-    color: #fff;
     text-decoration: none;
+    color: #ffffff8f;
+    transition: 0.5s;
+    font-size: 20px;
+    padding-right: 15px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+    font-size: 22px;
+  }
+  section{
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 10px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+  }
+  #home{
+    display: inline-block;
+    align-items: center;
+  }
+  .container h1 {
+    font-size: 50px;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end);
   }
   
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  .container p{
+    font-size: 40px;
+  }
+  .home-intro{
+    display: flex;
+    width: 200vh;
+  }
+ .logo-container{
+    max-width:100vh;
+    width: 100vh;
+ }
+  .logo-container img{
+    width: 100%;
+    object-fit: cover;
+  }
+  .auth-buttons{
+    display: inline;
+    align-items: center;
+  }
+  .auth-buttons button {
+    background-color: #ff4057;
+    color: #333;
+    border-radius: 50px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .auth-buttons button:hover {
+    background-color:#ff4057;
+  }
+
   footer {
     background-color: #333;
     color: #fff;
@@ -132,6 +212,7 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, ol, ul, li, form, labe
     margin: 0 auto;
     padding: 0 20px;
   }
+
   
   /* Typography */
   h1, h2, h3, h4, h5, h6 {
@@ -147,7 +228,7 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, ol, ul, li, form, labe
     display: inline-block;
     padding: 10px 20px;
     border-radius: 5px;
-    background-color: #007bff;
+    background-color: #ff4057;
     color: #fff;
     text-decoration: none;
     cursor: pointer;
@@ -155,7 +236,7 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, ol, ul, li, form, labe
   }
   
   .btn:hover {
-    background-color: #0056b3;
+    background-color:#ff4057;
   }
   
   /* Forms */
@@ -193,13 +274,5 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, ol, ul, li, form, labe
     display: inline-block;
     margin-right: 20px;
   }
-  
-  nav ul li a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  nav ul li a:hover {
-    text-decoration: underline;
-  }
+
   
