@@ -2,8 +2,16 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
-    overflow-y:inherit;
+}
+    /* Hide scrollbar for Chrome, Safari and Opera */
+.main::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .main {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
   }
   header {
     position: fixed; /* Set the position to fixed */
@@ -73,6 +81,7 @@ body {
   .container{
     margin-left: 38px;
     max-width: 215vh;
+    font-size: 20px;
   }
   #home{
     display: inline-block;
@@ -102,7 +111,7 @@ body {
     font-size: 45px;
   }
   .container h2{
-    font-size: 35px;
+    font-size: 50px;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     white-space: nowrap; /* Keeps the content on a single line */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
@@ -146,7 +155,15 @@ body {
   .about{
     max-width: 215vh;
   }
-
+dl dt{
+    font-size: 30px;
+}
+dl dd{
+    font-size: 20px;
+}
+.Impacts p{
+    font-size: 20px;
+}
   footer {
     background-color: #333;
     color: #fff;
@@ -296,5 +313,7 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, ol, ul, li, form, labe
     display: inline-block;
     margin-right: 20px;
   }
-
+a{
+    color: aqua;
+}
   
