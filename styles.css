@@ -2,8 +2,9 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+    overflow-y:inherit;
   }
-  
   header {
     position: fixed; /* Set the position to fixed */
     top: 0; /* Position it at the top of the viewport */
@@ -16,7 +17,7 @@ body {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 10px 4px rgba(0, 0, 0, 0.2);
-    width: 205vh;
+    width: 215vh;
     border-radius:0 0 40px 0;
     height: auto;
   }
@@ -64,16 +65,26 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 12px;
     box-shadow: 0 10px 4px rgba(0, 0, 0, 0.2);
-    margin-top: 20px;
+    margin-top: 30px;
+    width: 215vh;
+  }
+  .container{
+    margin-left: 38px;
+    max-width: 215vh;
   }
   #home{
     display: inline-block;
     align-items: center;
+    margin: 150px 45px;
+  }
+  #about{
+    font-size: 30px;
+    max-width: 90%;
   }
   .container h1 {
-    font-size: 50px;
+    font-size: 55px;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     white-space: nowrap; /* Keeps the content on a single line */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
@@ -87,16 +98,27 @@ body {
     from { width: 0 }
     to { width: 100% }
   }
-  .container p{
-    font-size: 40px;
+  #home p{
+    font-size: 45px;
+  }
+  .container h2{
+    font-size: 35px;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end);
   }
   .home-intro{
     display: flex;
     width: 200vh;
   }
  .logo-container{
-    max-width:100vh;
-    width: 100vh;
+    max-width:80vh;
+    width: 80vh;
+    right: 10px;
+    position: relative;
  }
   .logo-container img{
     width: 100%;
@@ -107,17 +129,22 @@ body {
     align-items: center;
   }
   .auth-buttons button {
+    margin:0 50px;
     background-color: #ff4057;
     color: #333;
     border-radius: 50px;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition:0.5s ease;
   }
   
   .auth-buttons button:hover {
-    background-color:#ff4057;
+    color: #f5f5f5;
+    filter: blur(1.2);
+  }
+  .about{
+    max-width: 215vh;
   }
 
   footer {
@@ -207,11 +234,6 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, ol, ul, li, form, labe
     color: #333;
   }
   
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
 
   
   /* Typography */
